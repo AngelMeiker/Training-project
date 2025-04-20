@@ -4,3 +4,9 @@
 @mixin toRem($property, $value, $base: 16px) {
     #{$property}: #{$value / $base}rem;
 }
+
+@mixin font-style($ft-family:san-serif, $ft-size:16px, $ft-weight:400){
+    font-family: $ft-family;
+    @include toRem(font-size, $ft-size);
+    font-weight: $ft-weight;
+}

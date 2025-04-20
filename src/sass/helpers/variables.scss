@@ -1,121 +1,99 @@
 /* COLORS */
-/* Primary */
-$primary500: #002E4B;
-$primary400: #004D7F;
-$primary300: #006DB3;
-$primary200: #8ABCDC;
-$primary100: #B0D2E7;
-$primary50: #E6F0F7;
 
-/* Secondary */
-$secondary500: #470E19;
-$secondary400: #79182B;
-$secondary300: #AA223C;
-$secondary200: #D899A5;
-$secondary100: #E5BAC3;
-$secondary50: #F7E9EC;
+/* Base */
+
+$primary: #4B98D9;
+$primary75:#6FA6D4;
+$primary50: #9FC3E2;
+$primary25: #CFE1F1;
 
 /* Neutral */
-$neutral500: #1F2937;
-$neutral400: #374151;
-$neutral300: #6B7280;
-$neutral200: #9CA3AF;
-$neutral100: #D1D5DB;
-$neutral50: #E8EAED;
-$neutral10: #F5F5F5;
 
-/* Generic */
-$black: #000;
-$white: #fff;
-$alert: #FDEDB5;
+$gray100: #353535;
+$gray75: #686868;
+$gray50:#9A9A9A ;
+$gray25:#CDCDCD;
+$light: #FAFCFE;
 
-/* States */
-$stateSuccess: #12B76A;
-$stateWarning: #F7C309;
-$stateError: #F04438;
+/* Function */
 
-/* Labels */
-$laberlGreen50: #D1FADF;
-$labelGreen100: #054F31;
-$labelRed50: #FEE4E2;
-$labelRed100: #7A271A;
-$labelOrange50: #FFEAD5;
-$labelOrange100: #7E2410;
-$labelBlue50: #D1E9FF;
-$labelBlue100: #194185;
-$labelYellow50: #FEF0C7;
-$labelYellow100: #7A2E0E;
-$labelIndigo50: #E0EAFF;
-$labelIndigo100: #292BA3;
-$labelPurple50: #EBE9FE;
-$labelPurple100: #3E1C96;
-$labelRose50: #FFE4E8;
-$labelRose100: #89123E;
-$labelPink50: #FCE7F6;
-$labelPink100: #851651;
-$labelBlueDark50: #E6EDF7;
-$labelBlueDark100: #001F48;
+$sucess: #3BD378;
+$error: #E75249;
 
-/* Special */
-$special50: #DD5143;
-$biblio: #AB263E;
+/* Information */
 
-/* Gradient */
-$gradient: linear-gradient(133deg, #002B47 33.55%, #006DB3 81.08%);
+$text-nav: #405258;
+$text: #191C3D;
+$subtext: #7579A0;
+$accent: #D8DBF5;
+$inverse-text: #F7F7FC;
 
-/* Background opacity */
-$blue20: rgba(68, 125, 165, 0.2);
-$coral20: rgba(216, 104, 81, 0.2);
-$lavender20: rgba(119, 116, 113, 0.2);
-$white20: rgba(255, 255, 255, 0.2);
+/* Page */
 
-/* Shadow */
-$shadow-xsmall: 0px 1px 4px 0px rgba(0, 0, 0, 0.04);
-$shadow-small: 0px 2px 6px 0px rgba(0, 0, 0, 0.06);
-$shadow-medium: 0px 6px 15px -2px rgba(0, 0, 0, 0.08);
-$shadow-large: 0px 8px 24px -3px rgba(0, 0, 0, 0.10), 0px 8px 24px -3px rgba(0, 0, 0, 0.05);
+$gray-line: #E6E7E8;
+$gray-hover: #EFF3F5;
+
+
+
 
 /* FONTS */
-$fontReg: "Inter Regular";
-$fontMed: "Inter Medium";
-$fontBold: "Inter Bold";
-$fontSemiBold: "Inter SemiBold";
+
+/* Family */
+
+$ft-roboto:'Roboto', san-serif;
+
+/* Sizes */
+
+$ft-size-h1: 64px;
+$ft-size-h2: 40px;
+$ft-size-h3: 24px;
+$ft-size-subtitle: 24px;
+$ft-size-body: 16px;
+$ft-size-small: 10px;
+
+/* Weight */
+$ft-weight-bold: 700;
+$ft-weight-semibold: 600;
+$ft-weight-regular: 400;
 
 
-/* MEDIA QUERIES */
-$mobile: 390px;
-$mobileMax: 479px;
+/* BOX */
 
-$mobilemd: 480px;
-$mobileemdMax: 575px;
+$bx-shadow: 0 8px 24px rgba(0,0,0,0.1);
 
-$mobilexl: 576px;
-$mobilexlMax: 767px;
 
-$tablet: 768px;
-$tabletMax: 991px;
+/* BREAKPOINTS */
 
-$tabletmd: 992px;
-$tabletmdMax: 1023px;
+$media-xxs: 360px;    
+$media-xs: 480px;     
+$media-sm: 576px;    
+$media-md: 768px;    
+$media-lg: 992px;    
+$media-xl: 1200px;   
+$media-xxl: 1440px;
+$media-xxxl: 1920px;
 
-$tabletxl: 1024px;
-$tabletxlMax: 1199px;
+/* ICONS */
 
-$desktopsm: 1200px;
-$desktopmd: 1279px;
+$bg-icon-profile: #FAFCFE;
 
-$desktop: 1280px;
-$desktopMax: 1439px;
+$icomoon-font-family: "iconos" !default;
+$icomoon-font-path: "fonts" !default;
 
-$desktopxl: 1440px;
-$desktopxlMax: 1919px;
-
-$fullHd: 1920px;
-
-/* Spacing */
-$spacing-5xl: 54px;
-$spacing-4xl: 48px;
-$spacing-3xl: 32px;
-$spacing-2xl: 24px;
-$spacing-xl: 16px;
-$spacing-m: 12px;
+$icon-delete: unquote('"\\e900"');
+$icon-edit: unquote('"\\e902"');
+$icon-calendar: unquote('"\\e903"');
+$icon-skip-right: unquote('"\\e904"');
+$icon-filter: unquote('"\\e901"');
+$icon-file: unquote('"\\e905"');
+$icon-burger-menu: unquote('"\\e906"');
+$icon-mail: unquote('"\\e907"');
+$icon-check: unquote('"\\e908"');
+$icon-waiting: unquote('"\\e909"');
+$icon-close: unquote('"\\e90a"');
+$icon-arrow-dropdown: unquote('"\\e910"');
+$icon-user: unquote('"\\e90b"');
+$icon-globe: unquote('"\\e90c"');
+$icon-power-off: unquote('"\\e90d"');
+$icon-phone: unquote('"\\e90e"');
+$icon-lock: unquote('"\\e90f"');

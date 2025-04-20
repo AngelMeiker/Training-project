@@ -1,0 +1,17 @@
+.nav__dropdown--language {
+    @include font-style($ft-roboto, $ft-size-body, $ft-weight-regular);
+    width: 130px;
+
+    &-item {
+        padding: 15px 20px;
+        transition: all 0.3s ease;
+
+        &:first-child {
+            @include font-style($ft-roboto, $ft-size-body, $ft-weight-bold);
+        }
+
+        &:hover {
+            background: $gray-hover;
+        }
+    }
+}

@@ -1,2 +1,46 @@
-.header__container 
-    
+include ../components/ct-button-header.pug
+
+.header
+  nav.nav
+    .nav__left
+      img.nav__logo(src="./images/secura-insurance_logo.png", alt="Logo de Secura Insurance")
+      ul.nav__list
+        li.nav__item
+          a.nav__link(href="#") Inicio
+        li.nav__item
+          a.nav__link(href="#") Próximas Renovaciones
+
+    .nav__right
+      ul.nav__list.nav__list--desktop.js-desktop-menu
+        li.nav__item
+          +dropdownButton('icon-user','Mi Perfil','icon-arrow-dropdown')
+          include ../fragments/ft-dropdown-profile
+        li.nav__item
+          +dropdownButton('icon-globe','Español','icon-arrow-dropdown')
+          include ../fragments/ft-dropdown-language
+
+    .nav__mobile 
+      ul.nav__list-mobile
+        li.nav__item-mobile
+          button.nav__button-mobile
+            span.icon-mobile.icon-mobile--profile.icon-user
+        li.nav__item-mobile
+          button.nav__button-mobile.js-burger-toggle
+            span.icon-mobile.icon-burger-menu
+
+        .nav__dropdown-mobile.js-mobile-dropdown
+          ul.nav__dropdown-mobile-list
+            li.nav__dropdown-mobile-item
+              .nav__dropdown-mobile-item-header
+                img.nav__logo(src="./images/secura-insurance_logo.png", alt="Logo de Secura Insurance")
+                button.nav__close-mobile-menu 
+                  span.icon-mobile.icon-close
+
+            li.nav__dropdown-mobile-item
+              a.nav__dropdown-mobile-link(href="#") Inicio
+            li.nav__dropdown-mobile-item
+              a.nav__dropdown-mobile-link(href="#") Próximas Renovaciones
+
+          .nav__dropdown-mobile-language
+            +dropdownButton('icon-globe','Español','icon-arrow-dropdown')
+            include ../fragments/ft-dropdown-language
