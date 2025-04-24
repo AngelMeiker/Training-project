@@ -4,6 +4,7 @@
   align-items: center;
   position: relative;
   padding: 16px 88px;
+  background-color: $light;
 
   @media (max-width: $media-lg) {
     padding: 16px 29px;
@@ -13,7 +14,7 @@
     @include font-style($ft-roboto, $ft-size-body, $ft-weight-bold);
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 25px;
   }
 
   &__logo {
@@ -40,21 +41,18 @@
     padding: 10px;
     text-decoration: none;
     color: $text-nav;
+    white-space: nowrap;
     transition: color 0.3s ease;
-
-    &:hover {
-      background: $gray-hover;
-    }
   }
 
   &__dropdown {
     display: none;
     background: $light;
     position: absolute;
-    top: 100%;
+    top: 101%;
     box-shadow: $bx-shadow;
     border-radius: 8px;
-    z-index: 8;
+    z-index: 3;
 
     &--active {
       display: block;
@@ -70,6 +68,15 @@
       &:not(:last-child) {
         border-bottom: 1px solid $gray-line;
       }
+    }
+  }
+
+  &__contact{
+    display: none;
+
+    &__active{
+      display: block;
+      top: 100%;
     }
   }
 

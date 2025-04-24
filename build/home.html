@@ -27,10 +27,24 @@
                        En este espacio puedes acceder, modificar, gestionar y consultar todo lo relacionado con tus servicios de energía. Fácil y rápido.</span></li>
                   <li class="nav__dropdown-item nav__dropdown--profile-item"><span class="icon-mobile icon-user"></span><a class="nav__link" href="#">Mis datos personales </a></li>
                   <li class="nav__dropdown-item nav__dropdown--profile-item"><span class="icon-mobile icon-lock"></span><a class="nav__link" href="#">Mi Contraseña</a></li>
-                  <li class="nav__dropdown-item nav__dropdown--profile-item"><span class="icon-mobile icon-phone"></span><a class="nav__link" href="#">
+                  <li class="nav__dropdown-item nav__dropdown--profile-item"><span class="icon-mobile icon-phone"></span><a class="nav__link js-nav-contact" href="#">
                        Contacto </a></li>
                   <li class="nav__dropdown-item nav__dropdown--profile-item"><span class="icon-mobile icon-power-off"></span><a class="nav__link" href="#">Cerrar Sesión </a></li>
                 </ul>
+              </li>
+              <li class="nav__contact">
+                <div class="contact"> 
+                  <div class="contact_container"> 
+                    <form class="contact_form" action="/submit" method="post">
+                      <label class="contac_email" for="email">Correo Principal</label>
+                      <input type="email" id="email" name="email" placeholder="ejemplo@email.com">
+                      <label class="contac_email" for="correo_2">Correo 2</label>
+                      <input type="email" id="email2" name="email2" placeholder="ejemplo@email.com">
+                      <label class="contac_email" for="phone_number">Teléfono principal</label>
+                      <input type="tel" id="phone_number" name="phone_number" placeholder="+34 556 656 323">
+                    </form>
+                  </div>
+                </div>
               </li>
               <li class="nav__item">
                       <button class="nav__button"><span class="icon-mobile icon-globe"></span><span class="nav__button-text">Español</span><span class="icon-mobile icon-arrow-dropdown"></span>
@@ -82,10 +96,203 @@
         </nav>
       </div>
     </header>
-    <main class="main-content" id="main-content"><img src="./images/image-hero.svg" alt="image hero">
+    <main class="main-content" id="main-content">
+      <div class="main">
+        <div class="main__banner-section"><img class="main__banner-image" src="./images/image-hero.jpg" alt="image hero">
+          <div class="main__banner-text">
+            <h1 class="main__welcome-text">Bienvenido a tu área personal</h1><span class="main__welcome-subtext">Gracias a ti más personas pueden disfrutar de una vida más segura.</span>
+          </div>
+        </div>
+        <div class="main__renovation-section"><span class="main__next-renovation">Próximas renovaciones</span>
+          <div class="main__renovation-data-container">
+            <div class="renovation__table">
+              <div class="renovation__row">
+                <div class="renovation__row-title-container">
+                  <div class="renovation__title">No. de póliza</div>
+                  <div class="renovation__title">Nombre del riesgo</div>
+                  <div class="renovation__title">Fecha de contrato</div>
+                  <div class="renovation__title">Fecha de vencimiento</div>
+                  <div class="renovation__title">Importe</div>
+                  <div class="renovation__title">Estado de la póliza</div>
+                </div>
+              </div>
+            </div>
+            <div class="renovation__row">
+              <div class="renovation__row-data-container">
+                <div class="renovation__data">75846843</div>
+                <div class="renovation__data">Hyundai Ioniq</div>
+                <div class="renovation__data">01/12/2022</div>
+                <div class="renovation__data">01/12/2023</div>
+                <div class="renovation__data renovation__data-amount">30.203,76 €</div>
+                <div class="renovation__data renovation__data-state--waiting"><span class="icon-waiting"></span><span class="renovation__data-text">Pendiente</span>
+                </div>
+              </div>
+            </div>
+            <div class="renovation__table">
+              <div class="renovation__row">
+                <div class="renovation__row-title-container">
+                  <div class="renovation__title">No. de póliza</div>
+                  <div class="renovation__title">Nombre del riesgo</div>
+                  <div class="renovation__title">Fecha de contrato</div>
+                  <div class="renovation__title">Fecha de vencimiento</div>
+                  <div class="renovation__title">Importe</div>
+                  <div class="renovation__title">Estado de la póliza</div>
+                </div>
+              </div>
+            </div>
+            <div class="renovation__row">
+              <div class="renovation__row-data-container">
+                <div class="renovation__data">75846843</div>
+                <div class="renovation__data">Hyundai Ioniq</div>
+                <div class="renovation__data">01/12/2022</div>
+                <div class="renovation__data">01/12/2023</div>
+                <div class="renovation__data renovation__data-amount">30.203,76 €</div>
+                <div class="renovation__data renovation__data-state--finish"><span class="icon-close"></span><span class="renovation__data-text">Vencido</span>
+                </div>
+              </div>
+            </div>
+            <div class="renovation__table">
+              <div class="renovation__row">
+                <div class="renovation__row-title-container">
+                  <div class="renovation__title">No. de póliza</div>
+                  <div class="renovation__title">Nombre del riesgo</div>
+                  <div class="renovation__title">Fecha de contrato</div>
+                  <div class="renovation__title">Fecha de vencimiento</div>
+                  <div class="renovation__title">Importe</div>
+                  <div class="renovation__title">Estado de la póliza</div>
+                </div>
+              </div>
+            </div>
+            <div class="renovation__row">
+              <div class="renovation__row-data-container">
+                <div class="renovation__data">75846843</div>
+                <div class="renovation__data">Hyundai Ioniq</div>
+                <div class="renovation__data">01/12/2022</div>
+                <div class="renovation__data">01/12/2023</div>
+                <div class="renovation__data renovation__data-amount">30.203,76 €</div>
+                <div class="renovation__data renovation__data-state--paid"><span class="icon-check"></span><span class="renovation__data-text">Pagada</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main__renovation-data-container-mobile">
+            <div class="renovation-mobile__row">
+              <div class="renovation-mobile__row-data-container">
+                <div class="renovation-mobile__title">No. de póliza</div>
+                <div class="renovation-mobile__data">75846843</div>
+              </div>
+              <div class="renovation-mobile__row-data-container">
+                <div class="renovation-mobile__title">Nombre del riesgo</div>
+                <div class="renovation-mobile__data">Hyundai Ioniq</div>
+              </div>
+              <div class="renovation-mobile__row-data-container">
+                <div class="renovation-mobile__title">Fecha de contrato</div>
+                <div class="renovation-mobile__data">01/12/2022</div>
+              </div>
+              <div class="renovation-mobile__row-data-container">
+                <div class="renovation-mobile__title">Fecha de vencimiento</div>
+                <div class="renovation-mobile__data">01/12/2023</div>
+              </div>
+              <div class="renovation-mobile__row-data-container">
+                <div class="renovation-mobile__title">Importe</div>
+                <div class="renovation-mobile__data renovation__data-amount">30.203,76 €</div>
+              </div>
+              <div class="renovation-mobile__row-data-container">
+                <div class="renovation-mobile__title">Estado</div>
+                <div class="renovation-mobile__data renovation-mobile__data-state--waiting"><span class="icon-waiting"></span><span class="renovation-mobile__data-text">Pendiente</span>
+                </div>
+              </div>
+            </div>
+            <div class="renovation-mobile__row">
+              <div class="renovation-mobile__row-data-container">
+                <div class="renovation-mobile__title">No. de póliza</div>
+                <div class="renovation-mobile__data">75846843</div>
+              </div>
+              <div class="renovation-mobile__row-data-container">
+                <div class="renovation-mobile__title">Nombre del riesgo</div>
+                <div class="renovation-mobile__data">Hyundai Ioniq</div>
+              </div>
+              <div class="renovation-mobile__row-data-container">
+                <div class="renovation-mobile__title">Fecha de contrato</div>
+                <div class="renovation-mobile__data">01/12/2022</div>
+              </div>
+              <div class="renovation-mobile__row-data-container">
+                <div class="renovation-mobile__title">Fecha de vencimiento</div>
+                <div class="renovation-mobile__data">01/12/2023</div>
+              </div>
+              <div class="renovation-mobile__row-data-container">
+                <div class="renovation-mobile__title">Importe</div>
+                <div class="renovation-mobile__data renovation__data-amount">30.203,76 €</div>
+              </div>
+              <div class="renovation-mobile__row-data-container">
+                <div class="renovation-mobile__title">Estado</div>
+                <div class="renovation-mobile__data renovation-mobile__data-state--finish"><span class="icon-close"></span><span class="renovation-mobile__data-text">Vencido</span>
+                </div>
+              </div>
+            </div>
+            <div class="renovation-mobile__row">
+              <div class="renovation-mobile__row-data-container">
+                <div class="renovation-mobile__title">No. de póliza</div>
+                <div class="renovation-mobile__data">75846843</div>
+              </div>
+              <div class="renovation-mobile__row-data-container">
+                <div class="renovation-mobile__title">Nombre del riesgo</div>
+                <div class="renovation-mobile__data">Hyundai Ioniq</div>
+              </div>
+              <div class="renovation-mobile__row-data-container">
+                <div class="renovation-mobile__title">Fecha de contrato</div>
+                <div class="renovation-mobile__data">01/12/2022</div>
+              </div>
+              <div class="renovation-mobile__row-data-container">
+                <div class="renovation-mobile__title">Fecha de vencimiento</div>
+                <div class="renovation-mobile__data">01/12/2023</div>
+              </div>
+              <div class="renovation-mobile__row-data-container">
+                <div class="renovation-mobile__title">Importe</div>
+                <div class="renovation-mobile__data renovation__data-amount">30.203,76 €</div>
+              </div>
+              <div class="renovation-mobile__row-data-container">
+                <div class="renovation-mobile__title">Estado</div>
+                <div class="renovation-mobile__data renovation-mobile__data-state--paid"><span class="icon-check"></span><span class="renovation-mobile__data-text">Pagada</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="main__button-see-more">Ver todas</button>
+        </div>
+        <div class="main__lead-section"> <span class="main__lead-text">Clientes Potenciales</span>
+          <div class="main__lead-data">
+            <div class="lead">
+              <div class="lead__container"> <span class="icon-mobile-delete icon-delete"></span>
+                <div class="lead__top"> <span class="lead__name">José Carlos Rodríguez</span><span class="lead__icon-delete icon-delete"> </span></div>
+                <div class="lead__mid"> <span class="lead__product">Producto a ofrecer: Seguro de moto</span></div>
+                <div class="lead__bottom"> <span class="lead__email">Email: jose.rod@gmail.com</span><span class="lead__phone_num">Teléfono: +34 258 632 555</span></div>
+              </div>
+            </div>
+            <div class="lead">
+              <div class="lead__container"> <span class="icon-mobile-delete icon-delete"></span>
+                <div class="lead__top"> <span class="lead__name">Ana Perffeti</span><span class="lead__icon-delete icon-delete"> </span></div>
+                <div class="lead__mid"> <span class="lead__product">Producto a ofrecer: Seguro de casa</span></div>
+                <div class="lead__bottom"> <span class="lead__email">Email: ana.per@gmail.com</span><span class="lead__phone_num">Teléfono: +34 258 632 444</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
     <footer class="footer" id="footer">
-      <div class="footer__container"></div>
+      <div class="footer"><span class="footer__help-text">¿Necesitas ayuda?</span>
+        <div class="footer__top">
+          <div class="footer__top-left"> 
+            <div class="footer__top-data-email"><span class="footer__top-icon icon icon-mail"></span><span class="footer__top-email">atencionalcliente@totalenergies.com</span></div>
+            <div class="footer__top-phone-numb"><span class="footer__top-icon icon icon-phone"></span><span class="footer__top-phone-numb">900 926 676</span></div>
+          </div>
+          <div class="footer__top-right"><span class="footer__top-companie-name">SECURA INSURANCE ESPAÑA, S.A.U</span><span class="footer__top-companie-direction">Calle Ribera del Loira 46, Madrid, 28042</span></div>
+        </div>
+        <div class="footer__bottom"> 
+          <div class="footer__bottom-legal-policy"><a class="footer__bottom-style footer__cookie-policy" href="#">Política de cookies</a><a class="footer__bottom-style footer__legal-notice" href="#">Aviso legal</a><a class="footer__bottom-style footer_privacy-policy" href="#">Política de privacidad </a></div><span class="footer__bottom-privacy-policy">© 2022 SecuraInsurance</span>
+        </div>
+      </div>
     </footer>
     <script src="js/main.js"></script>
   </body>

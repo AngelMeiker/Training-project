@@ -1,0 +1,97 @@
+body{
+    box-sizing: border-box;
+    background-color: $gray-bg;
+    max-width: $media-xxl;
+    margin: auto;
+}
+
+.main{
+    overflow: hidden;
+
+    &__banner-section{
+        position: relative;   
+    }
+
+    &__banner-image{
+        width: 1440px;
+        height: 431px;
+        object-fit: cover;
+        object-position: center;
+        -webkit-filter: brightness(0.5); 
+        filter: brightness(0.5);
+    }
+
+    &__banner-text{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: $light;
+        @media (max-width: $media-md) {
+            width: 280px;
+        }
+    }
+
+    &__welcome-text{
+        @include font-style($ft-roboto, $ft-size-h1, $ft-weight-bold);
+        padding-bottom: 30px;
+        @media (max-width: $media-md) {
+            @include font-style($ft-roboto, $ft-size-h2, $ft-weight-bold);
+            width: 278px;
+        }
+        
+    }
+
+    &__welcome-subtext{
+        @include font-style($ft-roboto, $ft-size-subtitle, $ft-weight-regular);
+        white-space: nowrap;
+        @media (max-width: $media-md) {
+            white-space: normal;
+        }
+    }
+
+    &__next-renovation, &__lead-text{
+        @include font-style($ft-roboto, $ft-size-h3, $ft-weight-semibold);
+        margin-top: 100px;
+    }
+
+    &__renovation-data-container, &__renovation-data-container-mobile, &__lead-data{
+        padding: 25px 0px;
+    }
+
+    &__lead-section, &__renovation-section{
+        padding: 24px;
+    }
+
+    &__renovation-data-container{
+        display: block;
+        @media (max-width:$media-md) {
+            display: none;
+        }
+    }
+
+    &__renovation-data-container-mobile{
+        display: none;
+
+        @media (max-width:$media-md) {
+            display: block;
+        }
+    }
+
+    &__lead-data{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        @media (max-width:$media-md) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    
+    &__button-see-more{
+        background-color: $primary25;
+        border-radius: 8px;
+        padding: 10px 16px;
+        text-align: center;
+    }
+}

@@ -15,6 +15,7 @@
 /** LAYOUT **/
 @import "layout/layout_grid/layout_grid";
 @import "layout/header";
+@import"layout/home";
 @import "layout/navigation";
 @import "layout/footer";
 
@@ -22,6 +23,9 @@
 
 @import 'fragments/ft-dropdown-profile';
 @import 'fragments/ft-dropdown-language';
+@import 'fragments/ft-renovation';
+@import 'fragments/ft-renovation-mobile';
+@import 'fragments/ft-lead';
 
 
 /** COMPONENTS **/

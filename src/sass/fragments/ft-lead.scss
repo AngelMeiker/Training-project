@@ -1,0 +1,72 @@
+.lead{
+    padding: 8px;
+
+    .icon-mobile-delete{
+        display: none;
+        @media (max-width:$media-md) {
+            display: block;
+            text-align: end;
+            color: $primary;
+            padding-bottom: 24px;
+        }
+    }
+   
+    &__container{
+        background-color: $light;
+        box-shadow: $bx-shadow;
+        padding: 16px;
+        border-radius: 8px;
+        padding-bottom: 24px;
+        
+        @media (max-width:$media-md) {
+            display: flex;
+            flex-direction: column;
+     
+        }
+        
+    }
+    &__top{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 12px;
+       
+    }
+
+    &__name{
+        @include font-style($ft-roboto, $ft-size-subtitle, $ft-weight-regular);
+    }
+
+    &__icon-delete{
+        color:$primary;
+        @media (max-width:$media-md) {
+            display: none;
+        }
+        
+    }
+    &__mid, &__bottom{
+        @media (max-width:$media-md) {
+            padding-bottom: 24px;
+        }
+    }
+
+    &__product{
+        @include font-style($ft-roboto, $ft-size-body, $ft-weight-regular);
+        color: $primary50;
+    }
+
+    &__email, &__phone_num{
+        @include font-style($ft-roboto, $ft-size-body, $ft-weight-bold);
+        color:$primary;
+        padding-top: 24px;
+    }
+
+    &__bottom{
+        display: flex;
+        justify-content: space-between;
+        @media (max-width:$media-md) {
+            display: flex;
+            flex-direction: column;
+        }
+
+    }
+}

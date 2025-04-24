@@ -1,0 +1,63 @@
+.renovation-mobile{
+
+    &__row{
+        display:flex;
+        background-color: $light;
+        box-shadow: $bx-shadow;
+        border-radius: 8px;
+        flex-direction: column;
+        margin-bottom: 25px;
+        &-data-container{
+            padding: 10px
+        }
+
+    }
+    
+    &__title{
+        @include font-style($ft-roboto, $ft-size-body, $ft-weight-regular);
+        color: $subtext;
+        padding: 8px 0px;
+    }
+    &__data{
+        @include font-style($ft-roboto, $ft-size-body, $ft-weight-regular);
+        display: flex;
+        align-items: center;    
+        justify-content: start;
+         
+    }
+    &__data-state{
+       
+   
+        &--finish{
+            justify-content: center;
+            background-color: $expired;
+            color: $expired-text;
+            border-radius: 4px;
+            width: 100px; 
+        }
+        &--waiting{
+            justify-content: center;
+            background-color: $waiting;
+            color: $subtext;
+            border-radius: 4px;
+            width: 100px;
+        }
+        &--paid{
+            justify-content: center;
+            background-color: $paid;
+            color: $paid-text;
+            border-radius: 4px;
+            width: 100px;
+        }
+        &--not-find{
+            justify-content: center;
+            background-color: $gray50;
+            color: $light;
+            border-radius: 4px;
+            width: 100px;
+        }
+    }
+    &__data-text{
+        padding-left: 8px;
+    }
+}

@@ -1,0 +1,75 @@
+.renovation {
+  &__table{
+    padding-top: 0px;
+  }
+  &__row{
+    padding: 8px;
+
+    &-title-container{
+      @include font-style($ft-roboto, $ft-size-body, $ft-weight-regular);
+      color: $subtext;
+      display: grid;
+      justify-items: center;
+      grid-column: 1 / -1;
+      grid-template-columns: repeat(6, 1fr);
+      border-bottom: 1px solid $subtext;
+
+    }
+
+    &-data-container {
+      @include font-style($ft-roboto, $ft-size-body, $ft-weight-regular);
+      display: grid;
+      justify-items: center;
+      text-align: center;
+      align-items: center;
+      grid-column: 1 / -1;
+      grid-template-columns: repeat(6, 1fr);
+      background-color: $light;
+      box-shadow: $bx-shadow;
+      border-radius: 8px;
+      padding: 24px 0px;
+    
+    }
+
+  }
+  &__data-amount{
+    @include font-style($ft-roboto, $ft-size-body, $ft-weight-bold);
+  }
+
+  &__data{
+    display: flex;
+    align-items: center;    
+    justify-content: center; 
+    padding: 8px;
+    border-radius: 8px;
+    width: 120px;
+    @media (max-width: $media-lg) {
+      width: 100px;
+      white-space: nowrap;
+    }
+  }
+
+  &__data-state{
+    
+    &--finish{
+      background-color: $expired;
+      color: $expired-text;
+    }
+    &--waiting{
+      background-color: $waiting;
+      color: $subtext;
+    }
+    &--paid{
+      background-color: $paid;
+      color: $paid-text;
+    }
+    &--not-find{
+      background-color: gray;
+    }
+  
+  }
+  &__data-text{
+    padding-left: 8px;
+  }
+
+}

@@ -1,4 +1,8 @@
 extends layouts/layout-home
+include ./fragments/ft-renovation-mobile
+include ./fragments/ft-renovation
+include ./fragments/ft-lead.pug
+include ./components/ct-button-header.pug
 
 block vars
     - var pageTitle = "Secura Insurance";
@@ -7,4 +11,28 @@ block header
     title Secura Insurance
     
 block content
-    img(src="./images/image-hero.svg", alt="image hero")
+  .main
+    .main__banner-section
+      img.main__banner-image(src="./images/image-hero.jpg", alt="image hero")
+      .main__banner-text
+        h1.main__welcome-text Bienvenido a tu área personal
+        span.main__welcome-subtext Gracias a ti más personas pueden disfrutar de una vida más segura.
+    
+
+    .main__renovation-section
+        span.main__next-renovation Próximas renovaciones
+        .main__renovation-data-container
+          +renovation-data-section('icon-waiting', 'Pendiente')
+          +renovation-data-section('icon-close', 'Vencido')
+          +renovation-data-section('icon-check', 'Pagada')
+        .main__renovation-data-container-mobile
+          +renovation-data-mobile-section('icon-waiting', 'Pendiente')
+          +renovation-data-mobile-section('icon-close', 'Vencido')
+          +renovation-data-mobile-section('icon-check', 'Pagada')
+        button.main__button-see-more Ver todas
+          
+    .main__lead-section 
+      span.main__lead-text Clientes Potenciales
+      .main__lead-data
+        +lead-data-section("José Carlos Rodríguez", "Seguro de moto", "jose.rod@gmail.com", "+34 258 632 555")
+        +lead-data-section("Ana Perffeti", "Seguro de casa", "ana.per@gmail.com", "+34 258 632 444")

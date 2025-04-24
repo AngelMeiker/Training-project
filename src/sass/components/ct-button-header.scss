@@ -5,6 +5,7 @@ button {
     gap: 10px;
     border: none;
     background-color: transparent;
+    white-space: nowrap;
     cursor: pointer;
 
     &--mobile{
