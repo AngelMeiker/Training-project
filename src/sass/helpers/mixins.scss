@@ -5,8 +5,41 @@
     #{$property}: #{$value / $base}rem;
 }
 
-@mixin font-style($ft-family:san-serif, $ft-size:16px, $ft-weight:400){
+@mixin font-style($ft-family:san-serif, $ft-size:16px, $ft-weight:400, $ft-color: black){
     font-family: $ft-family;
     @include toRem(font-size, $ft-size);
     font-weight: $ft-weight;
+    color: $ft-color;
+}
+
+@mixin hover-blue-common {
+    gap: 20px;
+    position: relative;
+    transition: all 0.3s ease;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 2px;
+        background: $primary;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    &:hover::before {
+        opacity: 1;
+    }
+}
+
+@mixin hover-blue($mode) {
+    @if $mode == 'desktop' {
+        &:not(:first-child) {
+        @include hover-blue-common;
+        }
+    } @else if $mode =='mobile'{
+        @include hover-blue-common;
+    }
 }

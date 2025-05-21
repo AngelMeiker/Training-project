@@ -8,13 +8,14 @@ html(lang="es")
 		block head
 
 	body
-
 		block vars
 
 		- var mainClass = "main-content";
 
 		if (pageClass)
 			- var mainClass = mainClass + ' ' + pageClass;
+
+		.page-overlay
 
 		header(id="header" class='header')
 			include header.pug

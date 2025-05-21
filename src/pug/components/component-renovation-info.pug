@@ -1,0 +1,32 @@
+mixin renovation-data-section(icon_state, label)
+  - var class_state = "";
+  if icon_state == "icon-close"
+    - class_state = "renovation__data-state--finish"
+  else if icon_state == "icon-waiting"
+    - class_state = "renovation__data-state--waiting"
+  else if icon_state == "icon-check"
+    - class_state = "renovation__data-state--paid"
+  else
+    - class_state = "renovation__data-state--not-find"
+    
+  .renovation__table
+    .renovation__row-header
+      .renovation__title No. de póliza
+      .renovation__title Nombre del riesgo
+      .renovation__title Fecha de contrato
+      .renovation__title Fecha de vencimiento
+      .renovation__title Importe
+      .renovation__title Estado de la póliza
+
+    .renovation__row-data
+      .renovation__data(data-title="No. de póliza") 75846843
+      .renovation__data(data-title="Nombre del riesgo") Hyundai Ioniq
+      .renovation__data(data-title="Fecha de contrato") 01/12/2022
+      .renovation__data(data-title="Fecha de vencimiento") 01/12/2023
+      .renovation__data.renovation__data-amount(data-title="Importe") 30.203,76 €
+      .renovation__data.renovation__data-state(data-title="Estado de la póliza")
+        .renovation__data-state-container(class=class_state)
+          if icon_state 
+            span(class=icon_state)
+          if label 
+            span.renovation__data-text= label

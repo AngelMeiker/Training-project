@@ -1,0 +1,87 @@
+.fee{
+
+    &__table {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        @include font-style($ft-roboto, $ft-size-body, $ft-weight-regular, $text);
+    }
+
+    &__row-header {
+        @include font-style($ft-roboto, $ft-size-body, $ft-weight-regular, $text-nav);
+        border-bottom: 1px solid $text-nav;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 0px 16px;
+
+        @media (max-width: $media-md) {
+            display: none;
+        }
+    }
+
+     &__row-data {
+        display: grid;
+        background-color: $white100;
+        box-shadow: $bx-shadow;
+        border-radius: 8px;
+        padding: 24px 16px;
+        grid-template-columns: repeat(4, 1fr);
+
+        @media (max-width: $media-md) {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 16px;
+
+        .fee__data::before {
+            @include font-style($ft-roboto, $ft-size-body, $ft-weight-regular, $subtext);
+            display: flex;
+            gap: 16px;
+            flex-direction: column;
+            content: attr(data-title) ": ";
+      }
+    }
+  }
+
+
+  &__data{
+    &-amount {
+      @include font-style($ft-roboto, $ft-size-body, $ft-weight-bold, $text);
+    }
+
+    &-state {
+
+      @media (max-width: $media-md) {
+        flex-direction: column;
+      }
+
+      &-container {
+        text-align: center;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        border-radius: 4px;
+        padding: 0px 8px;
+        width: fit-content;
+
+        @media (max-width: $media-md) {
+          margin: 0%;
+        }
+      }
+
+      &--paid {
+        background-color: $paid;
+        @include font-style($ft-roboto, $ft-size-body, $ft-weight-regular, $paid-text);
+      }
+
+      &--waiting {
+        background-color: $waiting;
+        @include font-style($ft-roboto, $ft-size-body, $ft-weight-regular, $text-nav);
+      }
+
+      &--finish {
+        background-color: $expired;
+        @include font-style($ft-roboto, $ft-size-body, $ft-weight-regular, $expired-text);
+
+      }
+    }
+  }
+}

@@ -15,19 +15,15 @@
 /** LAYOUT **/
 @import "layout/layout_grid/layout_grid";
 @import "layout/header";
-@import"layout/home";
+@import "layout/home";
 @import "layout/navigation";
 @import "layout/footer";
+@import "layout/next-renovation-list";
+@import "layout/policy-details";
 
 /** FRAGMENTS **/
-
-@import 'fragments/ft-dropdown-profile';
-@import 'fragments/ft-dropdown-language';
-@import 'fragments/ft-renovation';
-@import 'fragments/ft-renovation-mobile';
-@import 'fragments/ft-lead';
-
+@import 'fragments/fragment-lead';
+@import 'fragments/fragment-table-fee';
 
 /** COMPONENTS **/
-
-@import 'components/ct-button-header';
+@import 'components/component-renovation-info';

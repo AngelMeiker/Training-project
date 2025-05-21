@@ -1,10 +1,9 @@
 mixin lead-data-section(client_name, client_product, client_email, client_phone_num)
     .lead
         .lead__container 
-            span.icon-mobile-delete.icon-delete
             .lead__top 
-                span.lead__name= client_name 
-                span.lead__icon-delete.icon-delete 
+                span.lead__name= client_name
+                button.lead__delete-button.icon-delete
             .lead__mid 
                 span.lead__product Producto a ofrecer: #{client_product}
             .lead__bottom 

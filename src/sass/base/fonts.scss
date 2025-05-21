@@ -1,12 +1,13 @@
 @import "helpers/variables";
 
+
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?l1rb1q');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?l1rb1q#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?l1rb1q') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?l1rb1q') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?l1rb1q##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?1vxym8');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?1vxym8#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?1vxym8') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?1vxym8') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?1vxym8##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -113,4 +114,23 @@
     content: $icon-lock; 
   }
 }
-
+.icon-skip-left {
+  &:before {
+    content: $icon-skip-left; 
+  }
+}
+.icon-next-left {
+  &:before {
+    content: $icon-next-left; 
+  }
+}
+.icon-next-right {
+  &:before {
+    content: $icon-next-right; 
+  }
+}
+.icon-arrow-dropdown-2 {
+  &:before {
+    content: $icon-arrow-dropdown-2; 
+  }
+}

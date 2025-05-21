@@ -13,7 +13,10 @@ $gray100: #353535;
 $gray75: #686868;
 $gray50:#9A9A9A ;
 $gray25:#CDCDCD;
+$gray-border:#B7CBD3;
+$gray-button-border:#A7B8BF;
 $light: #FAFCFE;
+$white100: #FFFFFF;
 
 /* Function */
 
@@ -31,6 +34,7 @@ $text: #191C3D;
 $subtext: #7579A0;
 $accent: #D8DBF5;
 $inverse-text: #F7F7FC;
+$text-placeholder:#6B8893;
 
 $paid-text: #397A3F;
 $expired-text: #B22E00;
@@ -38,11 +42,22 @@ $expired-text: #B22E00;
 /* Page */
 
 $gray-line: #E6E7E8;
+$gray-line2: #D8D5D5;
 $gray-hover: #EFF3F5;
+$gray-text: #374649;
 $gray-bg: #FAFAFA;
+$white-bg:#FFFFFF;
 
 
 
+/* Icon*/
+
+$bg-icon-profile: #FAFCFE;
+
+
+/* PADDING */
+
+$pd-nav-foot: 16px 32px;
 
 /* FONTS */
 
@@ -83,8 +98,6 @@ $media-xxxl: 1920px;
 
 /* ICONS */
 
-$bg-icon-profile: #FAFCFE;
-
 $icomoon-font-family: "iconos" !default;
 $icomoon-font-path: "fonts" !default;
 
@@ -105,3 +118,7 @@ $icon-globe: unquote('"\\e90c"');
 $icon-power-off: unquote('"\\e90d"');
 $icon-phone: unquote('"\\e90e"');
 $icon-lock: unquote('"\\e90f"');
+$icon-skip-left: unquote('"\\e911"');
+$icon-next-left: unquote('"\\e912"');
+$icon-next-right: unquote('"\\e913"');
+$icon-arrow-dropdown-2: unquote('"\\e914"');
