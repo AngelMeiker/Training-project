@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/main.min.css" rel="stylesheet" media="all">
+    <link rel="icon" href="images/favicon.png" sizes="32x32" type="image/png">
+    <title>Próximas Renovaciones - Secura Insurance</title>
+  </head>
+  <body>
+    <div class="page-overlay js-overlay"></div>
+    <header class="header" id="header">
+      <nav class="nav js-nav">
+        <div class="nav__header js-header"><img class="nav__brand-logo" src="./images/secura-insurance_logo.png" alt="Logo de Secura Insurance">
+          <div class="nav__button-mobile">
+            <button class="nav__button-dropdown-menu js-button-dropdown-menu" type="button"><span class="nav__icon-style icon-burger-menu"></span></button>
+            <button class="nav__button-close-menu js-button-close-menu" type="button"><span class="nav__icon-style icon-close"></span></button>
+          </div>
+        </div>
+        <div class="nav__menu js-nav-menu">
+          <div class="nav__links"><a class="nav__link" href="#">Inicio</a><a class="nav__link" href="#">Próximas renovaciones</a></div>
+          <div class="nav__buttons-container">
+            <button class="nav__button-profile js-button-profile" type="button">
+              <div class="nav__button-profile-container js-button-bg"><span class="nav__icon-style nav__icon-profile icon-user"></span><span class="nav__text-profile">Mi Perfil</span><span class="nav__icon-arrow-dropdown icon-arrow-dropdown js-arrow-dropdown"></span></div>
+            </button>
+            <div class="nav__dropdown-profile js-dropdown-profile">
+              <div class="nav__dropdown-profile-header"><span class="nav__dropdown-profile-title">Mi Perfil</span><span class="nav__dropdown-profile-description">En este espacio puedes acceder, modificar, gestionar y consultar todo lo relacionado con tus servicios de energía. Fácil y rápido.</span></div>
+              <div class="nav__dropdown-profile-item"><span class="nav__icon-style icon-user"></span><a class="nav__dropdown-profile-text-item" href="#">Mis datos personales</a></div>
+              <div class="nav__dropdown-profile-item"><span class="nav__icon-style icon-lock"></span><a class="nav__dropdown-profile-text-item" href="#">Mi contraseña</a></div>
+              <div class="nav__dropdown-profile-item"><span class="nav__icon-style icon-phone"></span><a class="nav__dropdown-profile-text-item" href="#">Contacto</a></div>
+              <div class="nav__dropdown-profile-item"><span class="nav__icon-style icon-power-off"></span><a class="nav__dropdown-profile-text-item" href="#">Cerrar sesión</a></div>
+            </div>
+            <button class="nav__button-language js-button-language" type="button">
+              <div class="nav__button-language-container js-button-bg"><span class="nav__icon-style icon-globe"></span><span class="nav__text-language">Español</span><span class="nav__icon-arrow-dropdown icon-arrow-dropdown js-arrow-dropdown"></span></div>
+            </button>
+            <div class="nav__dropdown-language js-dropdown-language">
+              <div class="nav__dropdown-language-item"><a class="nav__dropdown-language-text-item">Español</a></div>
+              <div class="nav__dropdown-language-item"><a class="nav__dropdown-language-text-item">English</a></div>
+              <div class="nav__dropdown-language-item"><a class="nav__dropdown-language-text-item">Catalan</a></div>
+              <div class="nav__dropdown-language-item"><a class="nav__dropdown-language-text-item">Gallego</a></div>
+              <div class="nav__dropdown-language-item"><a class="nav__dropdown-language-text-item">Euskera</a></div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="main-content" id="main-content">
+      <div class="next-renovation">
+        <div class="next-renovation__top">
+          <div class="next-renovation__top-container">
+            <div class="next-renovation__top-links"> <a class="next-renovation__top-link" href="#">Pólizas</a><span class="next-renovation__top-link">/</span><a class="next-renovation__top-link" href="#">Próximas renovaciones</a></div>
+            <div class="next-renovation__top-data"> <span class="next-renovation__top-title">Próximas renovaciones</span>
+              <div class="next-renovation__top-policies"><span class="next-renovation__top-policies-icon icon-file"></span><span class="next-renovation__top-policies-number">770 Pólizas</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="next-renovation__mid">
+          <div class="next-renovation__filter-container js-filter-container">
+            <button class="next-renovation__filter-button js-filter-button">
+              <div class="next-renovation__filter-button-container js-filter-button-container"><span class="next-renovation__icon-style icon-filter"></span><span class="next-renovation__filter-button-text">Filtros</span><span class="next-renovation__number-filters js-number-filters">0</span></div>
+            </button>
+            <div class="next-renovation__dropdown-filter js-dropdown-filter">
+              <div class="next-renovation__dropdown-filter-header"><span class="next-renovation__dropdown-text">Filtros </span>
+                <button class="next-renovation__dropdown-filter-button-close js-button-close"><span class="next-renovation__icon-close icon-close"></span></button>
+              </div>
+              <div class="next-renovation__dropdown-filter-options"> 
+                <form class="next-renovation__dropdown-filter-form js-dropdown-filter-form" action="#" method="GET">
+                  <div class="next-renovation__dropdown-filter-form-container">
+                    <div class="next-renovation__dropdown-filter-item">
+                      <label for="policies-number">No. de pólizas</label>
+                      <div class="next-renovation__dropdown-filter-item-container">
+                        <select class="next-renovation__dropdown-filter-item-select" id="policies-number" name="policies-number">
+                          <option value="allpolicies">Todas las pólizas</option>
+                          <option value="option2">Opción 2</option>
+                          <option value="option3">Opción 3</option>
+                        </select>
+                        <div class="next-renovation__icon-style icon-arrow-dropdown-2"></div>
+                      </div>
+                    </div>
+                    <div class="next-renovation__dropdown-filter-item">
+                      <label for="risk-name">Nombre del riesgo</label>
+                      <input class="next-renovation__dropdown-filter-item-input" type="text" id="risk-name" name="risk-name" placeholder="Introduce el nombre del riesgo">
+                    </div>
+                    <div class="next-renovation__dropdown-filter-item">
+                      <fieldset>
+                        <legend class="next-renovation__dropdown-filter-item-legend-dates">Fecha de validez
+                          <div class="next-renovation__dropdown-filter-item-legend-dates-container">
+                            <div class="next-renovation__dropdown-filter-item-input">
+                              <input class="next-renovation__dropdown-filter-item-input-dates" type="date" id="start-date" name="start-date"><span class="next-renovation__icon-style icon-calendar"></span>
+                            </div><span class="next-renovation__dropdown-filter-item-span-dates">al</span>
+                            <div class="next-renovation__dropdown-filter-item-input">
+                              <input class="next-renovation__dropdown-filter-item-input-dates" type="date" id="end-date" name="end-date"><span class="next-renovation__icon-style icon-calendar"></span>
+                            </div>
+                          </div>
+                        </legend>
+                      </fieldset>
+                    </div>
+                    <div class="next-renovation__dropdown-filter-item">
+                      <label for="amount">Importe</label>
+                      <input class="next-renovation__dropdown-filter-item-input" type="number" id="amount" name="amount" placeholder="Introduce el importe">
+                    </div>
+                    <div class="next-renovation__dropdown-filter-item">
+                      <label for="state">Estado</label>
+                      <div class="next-renovation__dropdown-filter-item-container">
+                        <select class="next-renovation__dropdown-filter-item-select" id="state" name="state">
+                          <option value="allstate">Todas los estados</option>
+                          <option value="paid">Pagado</option>
+                          <option value="waiting">Pendiente </option>
+                          <option value="expired">Vencido</option>
+                        </select>
+                        <div class="next-renovation__icon-style icon-arrow-dropdown-2"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="next-renovation__dropdown-filter-footer">
+                    <button class="next-renovation__dropdown-filter-button-reset" type="reset">Borrar filtros</button>
+                    <button class="next-renovation__dropdown-filter-button-submit" type="submit">Aplicar filtros</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="next-renovation__mid-container">
+          <div class="next-renovation__mid-position">
+            <div class="next-renovation__mid-result"><span class="next-renovation__mid-policies-number">770 Pólizas</span>
+              <div class="next-renovation__mid-applied-filters-container">
+                <div class="next-renovation__mid-applied-filters js-show-filters"><span class="next-renovation__mid-vertical-bar">|</span><span class="next-renovation__mid-number-filter js-number-filters">0</span><span class="next-renovation__mid-applied-filters-text">Filtros aplicados</span></div>
+              </div>
+            </div>
+            <button class="next-renovation__mid-button-reset js-button-reset js-show-filters">Borrar filtros</button>
+          </div>
+          <div class="next-renovation__mid-order-container"><span class="next-renovation__mid-order-label">Ordenar por:</span>
+            <button class="next-renovation__mid-order-button">
+              <div class="next-renovation__mid-order-button-container"><span class="next-renovation__mid-order-button-text">Mayor importe</span><span class="next-renovation__icon-style icon-arrow-dropdown-2"></span></div>
+            </button>
+          </div>
+        </div>
+        <div class="next-renovation__mid-data">
+          <div class="renovation__table">
+            <div class="renovation__row-header">
+              <div class="renovation__title">No. de póliza</div>
+              <div class="renovation__title">Nombre del riesgo</div>
+              <div class="renovation__title">Fecha de contrato</div>
+              <div class="renovation__title">Fecha de vencimiento</div>
+              <div class="renovation__title">Importe</div>
+              <div class="renovation__title">Estado de la póliza</div>
+            </div>
+            <div class="renovation__row-data">
+              <div class="renovation__data" data-title="No. de póliza">75846843</div>
+              <div class="renovation__data" data-title="Nombre del riesgo">Hyundai Ioniq</div>
+              <div class="renovation__data" data-title="Fecha de contrato">01/12/2022</div>
+              <div class="renovation__data" data-title="Fecha de vencimiento">01/12/2023</div>
+              <div class="renovation__data renovation__data-amount" data-title="Importe">30.203,76 €</div>
+              <div class="renovation__data renovation__data-state" data-title="Estado de la póliza">
+                <div class="renovation__data-state-container renovation__data-state--waiting"><span class="icon-waiting"></span><span class="renovation__data-text">Pendiente</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="renovation__table">
+            <div class="renovation__row-header">
+              <div class="renovation__title">No. de póliza</div>
+              <div class="renovation__title">Nombre del riesgo</div>
+              <div class="renovation__title">Fecha de contrato</div>
+              <div class="renovation__title">Fecha de vencimiento</div>
+              <div class="renovation__title">Importe</div>
+              <div class="renovation__title">Estado de la póliza</div>
+            </div>
+            <div class="renovation__row-data">
+              <div class="renovation__data" data-title="No. de póliza">75846843</div>
+              <div class="renovation__data" data-title="Nombre del riesgo">Hyundai Ioniq</div>
+              <div class="renovation__data" data-title="Fecha de contrato">01/12/2022</div>
+              <div class="renovation__data" data-title="Fecha de vencimiento">01/12/2023</div>
+              <div class="renovation__data renovation__data-amount" data-title="Importe">30.203,76 €</div>
+              <div class="renovation__data renovation__data-state" data-title="Estado de la póliza">
+                <div class="renovation__data-state-container renovation__data-state--waiting"><span class="icon-waiting"></span><span class="renovation__data-text">Pendiente</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="renovation__table">
+            <div class="renovation__row-header">
+              <div class="renovation__title">No. de póliza</div>
+              <div class="renovation__title">Nombre del riesgo</div>
+              <div class="renovation__title">Fecha de contrato</div>
+              <div class="renovation__title">Fecha de vencimiento</div>
+              <div class="renovation__title">Importe</div>
+              <div class="renovation__title">Estado de la póliza</div>
+            </div>
+            <div class="renovation__row-data">
+              <div class="renovation__data" data-title="No. de póliza">75846843</div>
+              <div class="renovation__data" data-title="Nombre del riesgo">Hyundai Ioniq</div>
+              <div class="renovation__data" data-title="Fecha de contrato">01/12/2022</div>
+              <div class="renovation__data" data-title="Fecha de vencimiento">01/12/2023</div>
+              <div class="renovation__data renovation__data-amount" data-title="Importe">30.203,76 €</div>
+              <div class="renovation__data renovation__data-state" data-title="Estado de la póliza">
+                <div class="renovation__data-state-container renovation__data-state--finish"><span class="icon-close"></span><span class="renovation__data-text">Vencido</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="renovation__table">
+            <div class="renovation__row-header">
+              <div class="renovation__title">No. de póliza</div>
+              <div class="renovation__title">Nombre del riesgo</div>
+              <div class="renovation__title">Fecha de contrato</div>
+              <div class="renovation__title">Fecha de vencimiento</div>
+              <div class="renovation__title">Importe</div>
+              <div class="renovation__title">Estado de la póliza</div>
+            </div>
+            <div class="renovation__row-data">
+              <div class="renovation__data" data-title="No. de póliza">75846843</div>
+              <div class="renovation__data" data-title="Nombre del riesgo">Hyundai Ioniq</div>
+              <div class="renovation__data" data-title="Fecha de contrato">01/12/2022</div>
+              <div class="renovation__data" data-title="Fecha de vencimiento">01/12/2023</div>
+              <div class="renovation__data renovation__data-amount" data-title="Importe">30.203,76 €</div>
+              <div class="renovation__data renovation__data-state" data-title="Estado de la póliza">
+                <div class="renovation__data-state-container renovation__data-state--paid"><span class="icon-check"></span><span class="renovation__data-text">Pagada</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="renovation__table">
+            <div class="renovation__row-header">
+              <div class="renovation__title">No. de póliza</div>
+              <div class="renovation__title">Nombre del riesgo</div>
+              <div class="renovation__title">Fecha de contrato</div>
+              <div class="renovation__title">Fecha de vencimiento</div>
+              <div class="renovation__title">Importe</div>
+              <div class="renovation__title">Estado de la póliza</div>
+            </div>
+            <div class="renovation__row-data">
+              <div class="renovation__data" data-title="No. de póliza">75846843</div>
+              <div class="renovation__data" data-title="Nombre del riesgo">Hyundai Ioniq</div>
+              <div class="renovation__data" data-title="Fecha de contrato">01/12/2022</div>
+              <div class="renovation__data" data-title="Fecha de vencimiento">01/12/2023</div>
+              <div class="renovation__data renovation__data-amount" data-title="Importe">30.203,76 €</div>
+              <div class="renovation__data renovation__data-state" data-title="Estado de la póliza">
+                <div class="renovation__data-state-container renovation__data-state--waiting"><span class="icon-waiting"></span><span class="renovation__data-text">Pendiente</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="renovation__table">
+            <div class="renovation__row-header">
+              <div class="renovation__title">No. de póliza</div>
+              <div class="renovation__title">Nombre del riesgo</div>
+              <div class="renovation__title">Fecha de contrato</div>
+              <div class="renovation__title">Fecha de vencimiento</div>
+              <div class="renovation__title">Importe</div>
+              <div class="renovation__title">Estado de la póliza</div>
+            </div>
+            <div class="renovation__row-data">
+              <div class="renovation__data" data-title="No. de póliza">75846843</div>
+              <div class="renovation__data" data-title="Nombre del riesgo">Hyundai Ioniq</div>
+              <div class="renovation__data" data-title="Fecha de contrato">01/12/2022</div>
+              <div class="renovation__data" data-title="Fecha de vencimiento">01/12/2023</div>
+              <div class="renovation__data renovation__data-amount" data-title="Importe">30.203,76 €</div>
+              <div class="renovation__data renovation__data-state" data-title="Estado de la póliza">
+                <div class="renovation__data-state-container renovation__data-state--finish"><span class="icon-close"></span><span class="renovation__data-text">Vencido</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="renovation__table">
+            <div class="renovation__row-header">
+              <div class="renovation__title">No. de póliza</div>
+              <div class="renovation__title">Nombre del riesgo</div>
+              <div class="renovation__title">Fecha de contrato</div>
+              <div class="renovation__title">Fecha de vencimiento</div>
+              <div class="renovation__title">Importe</div>
+              <div class="renovation__title">Estado de la póliza</div>
+            </div>
+            <div class="renovation__row-data">
+              <div class="renovation__data" data-title="No. de póliza">75846843</div>
+              <div class="renovation__data" data-title="Nombre del riesgo">Hyundai Ioniq</div>
+              <div class="renovation__data" data-title="Fecha de contrato">01/12/2022</div>
+              <div class="renovation__data" data-title="Fecha de vencimiento">01/12/2023</div>
+              <div class="renovation__data renovation__data-amount" data-title="Importe">30.203,76 €</div>
+              <div class="renovation__data renovation__data-state" data-title="Estado de la póliza">
+                <div class="renovation__data-state-container renovation__data-state--paid"><span class="icon-check"></span><span class="renovation__data-text">Pagada</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="renovation__table">
+            <div class="renovation__row-header">
+              <div class="renovation__title">No. de póliza</div>
+              <div class="renovation__title">Nombre del riesgo</div>
+              <div class="renovation__title">Fecha de contrato</div>
+              <div class="renovation__title">Fecha de vencimiento</div>
+              <div class="renovation__title">Importe</div>
+              <div class="renovation__title">Estado de la póliza</div>
+            </div>
+            <div class="renovation__row-data">
+              <div class="renovation__data" data-title="No. de póliza">75846843</div>
+              <div class="renovation__data" data-title="Nombre del riesgo">Hyundai Ioniq</div>
+              <div class="renovation__data" data-title="Fecha de contrato">01/12/2022</div>
+              <div class="renovation__data" data-title="Fecha de vencimiento">01/12/2023</div>
+              <div class="renovation__data renovation__data-amount" data-title="Importe">30.203,76 €</div>
+              <div class="renovation__data renovation__data-state" data-title="Estado de la póliza">
+                <div class="renovation__data-state-container renovation__data-state--waiting"><span class="icon-waiting"></span><span class="renovation__data-text">Pendiente</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="renovation__table">
+            <div class="renovation__row-header">
+              <div class="renovation__title">No. de póliza</div>
+              <div class="renovation__title">Nombre del riesgo</div>
+              <div class="renovation__title">Fecha de contrato</div>
+              <div class="renovation__title">Fecha de vencimiento</div>
+              <div class="renovation__title">Importe</div>
+              <div class="renovation__title">Estado de la póliza</div>
+            </div>
+            <div class="renovation__row-data">
+              <div class="renovation__data" data-title="No. de póliza">75846843</div>
+              <div class="renovation__data" data-title="Nombre del riesgo">Hyundai Ioniq</div>
+              <div class="renovation__data" data-title="Fecha de contrato">01/12/2022</div>
+              <div class="renovation__data" data-title="Fecha de vencimiento">01/12/2023</div>
+              <div class="renovation__data renovation__data-amount" data-title="Importe">30.203,76 €</div>
+              <div class="renovation__data renovation__data-state" data-title="Estado de la póliza">
+                <div class="renovation__data-state-container renovation__data-state--finish"><span class="icon-close"></span><span class="renovation__data-text">Vencido</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="renovation__table">
+            <div class="renovation__row-header">
+              <div class="renovation__title">No. de póliza</div>
+              <div class="renovation__title">Nombre del riesgo</div>
+              <div class="renovation__title">Fecha de contrato</div>
+              <div class="renovation__title">Fecha de vencimiento</div>
+              <div class="renovation__title">Importe</div>
+              <div class="renovation__title">Estado de la póliza</div>
+            </div>
+            <div class="renovation__row-data">
+              <div class="renovation__data" data-title="No. de póliza">75846843</div>
+              <div class="renovation__data" data-title="Nombre del riesgo">Hyundai Ioniq</div>
+              <div class="renovation__data" data-title="Fecha de contrato">01/12/2022</div>
+              <div class="renovation__data" data-title="Fecha de vencimiento">01/12/2023</div>
+              <div class="renovation__data renovation__data-amount" data-title="Importe">30.203,76 €</div>
+              <div class="renovation__data renovation__data-state" data-title="Estado de la póliza">
+                <div class="renovation__data-state-container renovation__data-state--paid"><span class="icon-check"></span><span class="renovation__data-text">Pagada</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="next-renovation__bottom"> 
+          <div class="next-renovation__bottom-container"><span class="next-renovation__bottom-filter-text">Filas por páginas:</span>
+            <button class="next-renovation__bottom-filter-button">
+              <div class="next-renovation__bottom-filter-button-container"><span class="next-renovation__bottom-filter-number">10</span><span class="next-renovation__icon-style icon-arrow-dropdown-2"></span></div>
+            </button>
+          </div>
+          <div class="next-renovation__bottom-button-container"><span class="next-renovation__bottom-pagination">Página 1 de 77</span>
+            <button class="next-renovation__bottom-nav-button"><span class="next-renovation__bottom-nav-icon icon-skip-left"></span></button>
+            <button class="next-renovation__bottom-nav-button"><span class="next-renovation__bottom-nav-icon icon-next-left"></span></button>
+            <button class="next-renovation__bottom-nav-button"><span class="next-renovation__bottom-nav-icon icon-next-right"></span></button>
+            <button class="next-renovation__bottom-nav-button"><span class="next-renovation__bottom-nav-icon icon-skip-right"></span></button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer" id="footer">
+      <div class="footer">
+        <div class="footer__container"><span class="footer__help-text">¿Necesitas ayuda?</span>
+          <div class="footer__top">
+            <div class="footer__top-left"> 
+              <div class="footer__top-data-email"><span class="footer__top-icon icon icon-mail"></span><span class="footer__top-email">atencionalcliente@totalenergies.com</span></div>
+              <div class="footer__top-phone-numb"><span class="footer__top-icon icon icon-phone"></span><span class="footer__top-phone-numb">900 926 676</span></div>
+            </div>
+            <div class="footer__top-right"><span class="footer__top-companie-name">SECURA INSURANCE ESPAÑA, S.A.U</span><span class="footer__top-companie-direction">Calle Ribera del Loira 46, Madrid, 28042</span></div>
+          </div>
+          <div class="footer__bottom"> 
+            <div class="footer__bottom-legal-policy"><a class="footer__bottom-style footer__cookie-policy" href="#">Política de cookies</a><a class="footer__bottom-style footer__legal-notice" href="#">Aviso legal</a><a class="footer__bottom-style footer_privacy-policy" href="#">Política de privacidad </a></div><span class="footer__bottom-privacy-policy">© 2022 SecuraInsurance</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>

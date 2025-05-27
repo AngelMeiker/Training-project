@@ -1,0 +1,11 @@
+mixin lead-data-section(client_name, client_product, client_email, client_phone_num)
+    .lead
+        .lead__container 
+            .lead__top 
+                span.lead__name= client_name
+                button.lead__delete-button.icon-delete
+            .lead__mid 
+                span.lead__product(data-title="Producto a ofrecer:") #{client_product}
+            .lead__bottom 
+                span.lead__email(data-title="Email:")  #{client_email}
+                span.lead__phone_num(data-title="Teléfono:") #{client_phone_num}

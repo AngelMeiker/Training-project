@@ -1,0 +1,101 @@
+extends layouts/layout-home
+include ./fragments/fragment-table-fee
+
+block vars
+    - var pageTitle = "Próximas Renovaciones - Secura Insurance";
+
+block header
+    title Detalle de póliza - Secura Insurance
+
+block content
+
+    .policy-detail
+        .policy-detail__top
+            .policy-detail__top-container
+                .policy-detail__top-links 
+                    a(href="#").policy-detail__top-link Detalle de póliza
+                    span.policy-detail__top-link /
+                    a(href="#").policy-detail__top-link 75846843
+                .policy-detail__top-data 
+                    span.policy-detail__top-data-title.policy-detail__title-data-style Hyundai ioniq 2021
+                    span.policy-detail__top-data-policies-number No. de póliza: 75846843
+        
+        .policy-detail__mid
+            .policy-detail__mid-card.policy-detail__card-style
+                .policy-detail__mid-holder-header
+                    span.policy-detail__mid-holder-title.policy-detail__title-data-style Titular
+                    button.policy-detail__button-refresh 
+                        .policy-detail__button-refresh-container 
+                            .policy-detail__button-refresh-icon.icon-edit 
+                            .policy-detail__button-refresh-text Actualizar
+
+                .policy-detail__mid-holder-container.policy-detail__data-container-style
+                    .policy-detail__mid-holder-data.policy-detail__data-style(data-title="CIF") H59721886
+                    .policy-detail__mid-holder-data.policy-detail__data-style(data-title="Nombre") José Martínez
+                    .policy-detail__mid-holder-data.policy-detail__data-style(data-title="Dirección fiscal") Casanova 128
+                    .policy-detail__mid-holder-data.policy-detail__data-style(data-title="Estado de la póliza")
+                        .policy-detail__mid-holder-state-container
+                            span.icon-check
+                            span.renovation__data-text Vigente
+
+            .policy-detail__mid-card.policy-detail__card-style
+                .policy-detail__mid-billing-header
+                    span.policy-detail__mid-billing-title.policy-detail__title-data-style Dirección de facturación
+                    button.policy-detail__button-refresh 
+                        .policy-detail__button-refresh-container 
+                            .policy-detail__button-refresh-icon.icon-edit 
+                            .policy-detail__button-refresh-text Actualizar
+
+                .policy-detail__mid-billing-container.policy-detail__data-container-style
+                    .policy-detail__mid-billing-data.policy-detail__data-style(data-title="Dirección") CP LLUIS COMPANYS Nº 6, CL
+                    .policy-detail__mid-billing-data.policy-detail__data-style(data-title="Número") 71
+                    .policy-detail__mid-billing-data.policy-detail__data-style(data-title="Ciudad") Barcelona
+                    .policy-detail__mid-billing-data.policy-detail__data-style(data-title="Código postal") 09001
+                    
+
+        .policy-detail__mid-fee
+            +fee-section('icon-waiting', 'Pendiente')
+            +fee-section('icon-check', 'Pagada')
+            +fee-section('icon-check', 'Pagada')
+
+        .policy-detail__bottom
+            .policy-detail__bottom-card.policy-detail__card-style
+                .policy-detail__bottom-payment-header 
+                    .policy-detail__bottom-payment-title.policy-detail__title-data-style Método de pago
+                .policy-detail__bottom-payment-container.policy-detail__data-container-style
+                    .policy-detail__bottom-payment-data.policy-detail__data-style(data-title="Nombre") GRUP SISQUELLA SERVEIS PROFESSIONALS
+                    .policy-detail__bottom-payment-data.policy-detail__data-style(data-title="CIF") B63249544
+                    .policy-detail__bottom-payment-data.policy-detail__data-style(data-title="Tipo de cobro") DOMICILIADO Estándar (7 días)
+                    .policy-detail__bottom-payment-data.policy-detail__data-style(data-title="IBAN") ES1700810002420001******
+                    .policy-detail__bottom-payment-data.policy-detail__data-style(data-title="Banco") Banco de Sabadell, S.A.
+                button.policy-detail__button-refresh 
+                            .policy-detail__button-refresh-container 
+                                .policy-detail__button-refresh-icon.icon-edit 
+                                .policy-detail__button-refresh-text Actualizar
+
+            .policy-detail__bottom-card.policy-detail__card-style
+                .policy-detail__bottom-mailing-header 
+                    span.policy-detail__bottom-mailing-title.policy-detail__title-data-style Dir. de correspondencia
+                .policy-detail__bottom-mailing-container.policy-detail__data-container-style
+                    .policy-detail__bottom-mailing-data.policy-detail__data-style(data-title="Datos") GRUP SISQUELLA SERVEIS PROFESSIONALS
+                    .policy-detail__bottom-mailing-data.policy-detail__data-style(data-title="Población") MONTCADA CENTRE
+                    .policy-detail__bottom-mailing-data.policy-detail__data-style(data-title="Código postal") 08110
+                    .policy-detail__bottom-mailing-data.policy-detail__data-style(data-title="Dirección") PZ/ EGLESIA DE L’
+                    .policy-detail__bottom-mailing-data.policy-detail__data-style(data-title="Número") 7
+                    .policy-detail__bottom-mailing-data.policy-detail__data-style(data-title="Aclarador") BAJO
+                button.policy-detail__button-refresh 
+                    .policy-detail__button-refresh-container 
+                        .policy-detail__button-refresh-icon.icon-edit 
+                        .policy-detail__button-refresh-text Actualizar
+
+            .policy-detail__bottom-card.policy-detail__card-style
+                .policy-detail__bottom-contact-header 
+                    .policy-detail__bottom-contact-title.policy-detail__title-data-style Método de pago
+                .policy-detail__bottom-contact-container.policy-detail__data-container-style
+                    .policy-detail__bottom-contact-data.policy-detail__data-style(data-title="Correo principal") email@gmail.com
+                    .policy-detail__bottom-contact-data.policy-detail__data-style(data-title="Correo secundario") email2@gmail.com
+                    .policy-detail__bottom-contact-data.policy-detail__data-style(data-title="Teléfono principal") +23 373 782 939
+                button.policy-detail__button-refresh 
+                    .policy-detail__button-refresh-container.policy-detail__button-refresh-bottom-container
+                        .policy-detail__button-refresh-icon.icon-edit 
+                        .policy-detail__button-refresh-text Actualizar

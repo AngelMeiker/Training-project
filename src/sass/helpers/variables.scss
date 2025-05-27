@@ -1,0 +1,126 @@
+/* COLORS */
+
+/* Base */
+
+$primary: #4B98D9;
+$primary75:#6FA6D4;
+$primary50: #9FC3E2;
+$primary25: #CFE1F1;
+
+/* Neutral */
+
+$gray100: #353535;
+$gray75: #686868;
+$gray50:#9A9A9A ;
+$gray25:#CDCDCD;
+$gray-border:#B7CBD3;
+$gray-button-border:#A7B8BF;
+$light: #FAFCFE;
+$white100: #FFFFFF;
+
+/* Function */
+
+$sucess: #3BD378;
+$error: #E75249;
+
+$paid:#57AE6026;
+$waiting:#FFE74F66;
+$expired:#DB39001F;
+
+/* Information */
+
+$text-nav: #405258;
+$text: #191C3D;
+$subtext: #7579A0;
+$accent: #D8DBF5;
+$inverse-text: #F7F7FC;
+$text-placeholder:#6B8893;
+
+$paid-text: #397A3F;
+$expired-text: #B22E00;
+
+/* Page */
+
+$gray-line: #E6E7E8;
+$gray-line2: #D8D5D5;
+$gray-hover: #EFF3F5;
+$gray-text: #374649;
+$gray-bg: #FAFAFA;
+$white-bg:#FFFFFF;
+
+
+
+/* Icon*/
+
+$bg-icon-profile: #FAFCFE;
+
+
+/* PADDING */
+
+$pd-nav-foot: 16px 32px;
+
+/* FONTS */
+
+/* Family */
+
+$ft-roboto:'Roboto', san-serif;
+
+/* Sizes */
+
+$ft-size-h1: 64px;
+$ft-size-h2: 40px;
+$ft-size-h3: 24px;
+$ft-size-subtitle: 24px;
+$ft-size-body: 16px;
+$ft-size-small: 10px;
+
+/* Weight */
+$ft-weight-bold: 700;
+$ft-weight-semibold: 600;
+$ft-weight-regular: 400;
+
+
+/* BOX */
+
+$bx-shadow: 0 8px 24px rgba(0,0,0,0.1);
+
+/* TRANSITION*/
+$smooth-transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+
+
+/* BREAKPOINTS */
+
+$media-xxs: 360px;    
+$media-xs: 480px;     
+$media-sm: 576px;    
+$media-md: 768px;    
+$media-lg: 992px;    
+$media-xl: 1200px;   
+$media-xxl: 1440px;
+$media-xxxl: 1920px;
+
+/*ICON MOON*/
+$icomoon-font-family: "iconos" !default;
+$icomoon-font-path: "fonts" !default;
+
+$icon-delete: "\e900";
+$icon-edit: "\e902";
+$icon-calendar: "\e903";
+$icon-skip-right: "\e904";
+$icon-filter: "\e901";
+$icon-file: "\e905";
+$icon-burger-menu: "\e906";
+$icon-mail: "\e907";
+$icon-check: "\e908";
+$icon-waiting: "\e909";
+$icon-close: "\e90a";
+$icon-arrow-dropdown: "\e910";
+$icon-user: "\e90b";
+$icon-globe: "\e90c";
+$icon-power-off: "\e90d";
+$icon-phone: "\e90e";
+$icon-lock: "\e90f";
+$icon-skip-left: "\e911";
+$icon-next-left: "\e912";
+$icon-next-right: "\e913";
+$icon-arrow-dropdown-2: "\e914";

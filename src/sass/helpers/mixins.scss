@@ -1,0 +1,61 @@
+/* Convert px to rem 
+    - example of usage: @include toRem(font-size, 20px);
+*/
+@mixin toRem($property, $value, $base: 16px) {
+    #{$property}: #{$value / $base}rem;
+}
+
+@mixin font-style($ft-family:san-serif, $ft-size:16px, $ft-weight:400, $ft-color: black){
+    font-family: $ft-family;
+    @include toRem(font-size, $ft-size);
+    font-weight: $ft-weight;
+    color: $ft-color;
+}
+
+@mixin hover-blue-common {
+    gap: 20px;
+    position: relative;
+    transition: all 0.3s ease;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 2px;
+        background: $primary;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    &:hover::before {
+        opacity: 1;
+    }
+}
+
+@mixin hover-blue($mode) {
+    @if $mode == 'desktop' {
+        &:not(:first-child) {
+        @include hover-blue-common;
+        }
+    } @else if $mode =='mobile'{
+        @include hover-blue-common;
+    }
+}
+
+@mixin menu-dropdown-style($mds-position: fixed, $mds-top: 0, $mds-width: 100vw, $mds-height: 100%, 
+                           $mds-bg-color: white, $mds-flex-dir: row, $mds-transform: none, $mds-opacity: 0,
+                           $mds-visibility: hidden, $mds-transition: none, $mds-z-index: 1){
+    position: $mds-position;
+    top: $mds-top;
+    width: $mds-width;
+    height: $mds-height;
+    background-color: $mds-bg-color;
+    flex-direction: $mds-flex-dir;
+    transform: $mds-transform;
+    opacity: $mds-opacity;
+    visibility: $mds-visibility;
+    transition: $mds-transition;
+    z-index: $mds-z-index;
+}

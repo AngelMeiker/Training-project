@@ -1,0 +1,52 @@
+nav.nav.js-nav
+  .nav__header.js-header
+    img.nav__brand-logo(src="./images/secura-insurance_logo.png", alt="Logo de Secura Insurance")
+    .nav__button-mobile
+      button.nav__button-dropdown-menu.js-button-dropdown-menu(type="button")
+        span.nav__icon-style.icon-burger-menu
+      button.nav__button-close-menu.js-button-close-menu(type="button")
+        span.nav__icon-style.icon-close
+
+  .nav__menu.js-nav-menu
+    .nav__links
+      a.nav__link(href="#") Inicio
+      a.nav__link(href="#") Próximas renovaciones
+    .nav__buttons-container
+      button.nav__button-profile.js-button-profile(type="button")
+        .nav__button-profile-container.js-button-bg
+          span.nav__icon-style.nav__icon-profile.icon-user
+          span.nav__text-profile Mi Perfil
+          span.nav__icon-arrow-dropdown.icon-arrow-dropdown.js-arrow-dropdown
+      .nav__dropdown-profile.js-dropdown-profile
+        .nav__dropdown-profile-header
+          span.nav__dropdown-profile-title Mi Perfil
+          span.nav__dropdown-profile-description En este espacio puedes acceder, modificar, gestionar y consultar todo lo relacionado con tus servicios de energía. Fácil y rápido.
+        .nav__dropdown-profile-item
+          span.nav__icon-style.icon-user
+          a.nav__dropdown-profile-text-item(href="#") Mis datos personales
+        .nav__dropdown-profile-item
+          span.nav__icon-style.icon-lock
+          a.nav__dropdown-profile-text-item(href="#") Mi contraseña
+        .nav__dropdown-profile-item
+          span.nav__icon-style.icon-phone
+          a.nav__dropdown-profile-text-item(href="#") Contacto
+        .nav__dropdown-profile-item
+          span.nav__icon-style.icon-power-off
+          a.nav__dropdown-profile-text-item(href="#") Cerrar sesión
+
+      button.nav__button-language.js-button-language(type="button")
+        .nav__button-language-container.js-button-bg
+          span.nav__icon-style.icon-globe
+          span.nav__text-language Español
+          span.nav__icon-arrow-dropdown.icon-arrow-dropdown.js-arrow-dropdown
+      .nav__dropdown-language.js-dropdown-language
+        .nav__dropdown-language-item
+          a.nav__dropdown-language-text-item Español
+        .nav__dropdown-language-item
+          a.nav__dropdown-language-text-item English
+        .nav__dropdown-language-item
+          a.nav__dropdown-language-text-item Catalan
+        .nav__dropdown-language-item
+          a.nav__dropdown-language-text-item Gallego
+        .nav__dropdown-language-item
+          a.nav__dropdown-language-text-item Euskera

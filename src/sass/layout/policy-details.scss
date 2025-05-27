@@ -1,0 +1,137 @@
+.policy-detail {
+    background-color: $gray-bg;
+
+    &__top-container {
+        @include font-style($ft-roboto, $ft-size-body, $ft-weight-regular, $text-placeholder);
+        padding: $pd-nav-foot;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    &__top-links {
+        display: flex;
+        gap: 8px;
+    }
+
+    &__top-link {
+        text-decoration: none;
+        color: inherit;
+
+        &:not(:first-child) {
+            @include font-style($ft-roboto, $ft-size-body, $ft-weight-regular, $primary);
+        }
+    }
+
+    &__top-data {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    &__mid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        padding: $pd-nav-foot;
+
+        @media (max-width: $media-md) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-holder-header,
+        &-billing-header {
+            display: flex;
+            justify-content: space-between;
+        }
+       
+        &-holder-state-container {
+            @include font-style($ft-roboto, $ft-size-body, $ft-weight-regular, $paid-text);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            background-color: $paid;
+            padding: 0px 8px;
+            border-radius: 4px;
+            width: fit-content;
+        }
+    }
+
+    &__mid-fee {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: $pd-nav-foot;
+
+        .fee__table {
+            &:not(:first-child) {
+                .fee__row-header {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__bottom {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        padding: $pd-nav-foot;
+
+        @media (max-width: $media-md) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-payment-container,
+        &-mailing-container,
+        &-contact-container {
+            height: 100%;
+        }
+
+        &-button-refresh-bottom-container {
+            margin-top: auto;
+        }
+    }
+
+    &__data-container-style{
+         @include font-style($ft-roboto, $ft-size-body, $ft-weight-bold, $gray100);
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    &__card-style {
+        background-color: $light;
+        box-shadow: $bx-shadow;
+        padding: 16px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    &__title-data-style{
+        @include font-style($ft-roboto, $ft-size-h3, $ft-weight-regular, $gray100);
+    }
+
+    &__data-style::before{
+        display: flex;
+        flex-direction: column;
+        @include font-style($ft-roboto, $ft-size-body, $ft-weight-regular, $text-placeholder);
+        content: attr(data-title) " ";
+    }
+    
+    &__button-refresh {
+        background-color: transparent;
+        border: none;
+
+        &-container {
+            @include font-style($ft-roboto, $ft-size-body, $ft-weight-bold, $primary);
+            display: flex;
+            gap: 8px;
+            align-items: center
+        }
+    }
+}

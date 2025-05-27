@@ -1,0 +1,130 @@
+body {
+    box-sizing: border-box;
+    max-width: $media-xxl;
+    margin: auto;
+
+}
+
+.page-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); 
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1; 
+
+  &--active{
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.main {
+    background-color: $gray-bg;
+
+    &__banner-section {
+        position: relative;
+    }
+
+    &__banner-image {
+        width: 1440px;
+        height: 431px;
+        object-fit: cover;
+        object-position: center;
+        -webkit-filter: brightness(0.5);
+        filter: brightness(0.5);
+    }
+
+    &__banner-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        @media (max-width: $media-md) {
+            width: 280px;
+        }
+    }
+
+    &__welcome-text {
+        @include font-style($ft-roboto, $ft-size-h1, $ft-weight-bold, $white100);
+        padding-bottom: 30px;
+
+        @media (max-width: $media-md) {
+            @include font-style($ft-roboto, $ft-size-h2, $ft-weight-bold, $white100);
+            width: 278px;
+        }
+
+    }
+
+    &__welcome-subtext {
+        @include font-style($ft-roboto, $ft-size-subtitle, $ft-weight-regular, $white100);
+        white-space: nowrap;
+
+        @media (max-width: $media-md) {
+            white-space: normal;
+        }
+    }
+
+    &__next-renovation-text,
+    &__lead-text {
+        @include font-style($ft-roboto, $ft-size-h3, $ft-weight-semibold, $gray100);
+
+    }
+
+    &__next-renovation-text-container,
+    &__lead-text-container {
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+
+
+    &__renovation-data-container,
+    &__lead-data {
+        padding: 24px 0px;
+    }
+
+    &__lead-section,
+    &__renovation-section {
+        padding: 24px;
+    }
+
+    &__renovation-data-container{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        .renovation__table{
+            &:not(:first-child){
+                .renovation__row-header{
+                    display: none;
+                }
+            }
+        }
+        
+    }
+       
+    &__lead-data {
+        display: grid;
+        gap: 24px;
+        grid-template-columns: repeat(2, 1fr);
+
+        @media (max-width:$media-md) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__button-see-more {
+        border: none;
+        border-radius: 8px;
+        @include font-style($ft-roboto, $ft-size-body, $ft-weight-regular, $gray100);
+        background-color: $primary25;
+        padding: 10px 16px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,28 @@
+mixin fee-section(icon_state, label)
+  - var class_state = "";
+  if icon_state == "icon-close"
+    - class_state = "fee__data-state--finish"
+  else if icon_state == "icon-waiting"
+    - class_state = "fee__data-state--waiting"
+  else if icon_state == "icon-check"
+    - class_state = "fee__data-state--paid"
+  else
+    - class_state = "fee__data-state--not-find"
+    
+  .fee__table
+    .fee__row-header
+      .fee__title Fecha de emisión
+      .fee__title Periodo
+      .fee__title Importe
+      .fee__title Estado
+
+    .fee__row-data
+      .fee__data(data-title="No. de póliza") 24/07/2024
+      .fee__data(data-title="Nombre del riesgo") 01/12/2022 - 31/01/2022
+      .fee__data.fee__data-amount(data-title="Fecha de contrato") 684,76 €
+      .fee__data.fee__data-state(data-title="Estado de la póliza")
+        .fee__data-state-container(class=class_state)
+          if icon_state 
+            span(class=icon_state)
+          if label 
+            span.fee__data-text= label

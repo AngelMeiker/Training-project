@@ -1,0 +1,99 @@
+.footer {
+    background-color: $white-bg;
+
+    &__container {
+        border-top: 1px solid $gray-hover;
+        padding: $pd-nav-foot;
+    }
+
+    &__help-text {
+        @include font-style($ft-roboto, $ft-size-body, $ft-weight-bold, $primary);
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 10px;
+        @include font-style($ft-roboto, $ft-size-body, $ft-weight-regular, $gray100);
+
+        @media (max-width: $media-md) {
+            display: flex;
+            justify-content: none;
+            flex-direction: column;
+        }
+
+        &-left {
+            display: flex;
+            flex-direction: column;
+
+            @media (max-width: $media-md) {
+                padding-bottom: 20px;
+            }
+
+        }
+
+        &-data-email,
+        &-companie-name {
+            padding-bottom: 10px;
+        }
+
+        &-right {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-icon {
+            color: $primary;
+            padding-right: 5px;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 20px;
+
+        @media (max-width: $media-md) {
+            display: flex;
+            justify-content: none;
+            flex-direction: column;
+        }
+
+        &-legal-policy,
+        &-privacy-policy {
+            @include font-style($ft-roboto, $ft-size-small, $ft-weight-regular, $gray100);
+
+            @media (max-width: $media-md) {
+                @include font-style($ft-roboto, $ft-size-body, $ft-weight-regular, $gray100);
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        &-style {
+            padding-right: 10px;
+            text-decoration: none;
+            color: inherit;
+
+            &:not(:first-child) {
+                padding-left: 10px;
+
+                @media (max-width: $media-md) {
+                    padding-left: 0px;
+                }
+            }
+
+            &:not(:last-child) {
+                border-right: 1px solid $subtext;
+
+                @media (max-width: $media-md) {
+                    border: none;
+                }
+            }
+
+            @media (max-width: $media-md) {
+                padding-bottom: 20px;
+            }
+        }
+    }
+}
