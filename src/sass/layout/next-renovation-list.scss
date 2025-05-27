@@ -434,9 +434,13 @@
   @media (max-width: $media-md) {
     display: flex;
     overflow-x: scroll;
+
     white-space: nowrap;
     align-items: center;
     padding: $pd-nav-foot;
+    &::-webkit-scrollbar {
+      background: transparent;
+    }
   }
 }
 
