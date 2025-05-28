@@ -28,10 +28,11 @@ body {
 
     &__banner-section {
         position: relative;
+        overflow: hidden;
     }
 
     &__banner-image {
-        width: 1440px;
+        width: 100vw;
         height: 431px;
         object-fit: cover;
         object-position: center;
