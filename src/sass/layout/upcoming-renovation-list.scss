@@ -1,4 +1,4 @@
-.next-renovation {
+.upcoming-renovation {
   background-color: $gray-bg;
   display: flex;
   flex-direction: column;
@@ -210,7 +210,7 @@
       gap: 10px;
 
       &--active{
-        .next-renovation__number-filters{
+        .upcoming-renovation__number-filters{
            @media (max-width: $media-md) {display: block}
         }
       }

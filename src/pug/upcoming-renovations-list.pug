@@ -1,0 +1,136 @@
+extends layouts/layout-home
+include ./components/component-renovation-info
+
+block vars
+    - var pageTitle = "Próximas Renovaciones - Secura Insurance";
+
+block header
+    title Próximas Renovaciones - Secura Insurance
+
+block content
+
+    - var iteration = 0;
+    - var icon_state = ['icon-waiting', 'icon-close', 'icon-check']
+    - var text_state = ['Pendiente', 'Vencido', 'Pagada']
+
+    .upcoming-renovation
+
+        .upcoming-renovation__top
+        
+            .upcoming-renovation__top-container
+                .upcoming-renovation__top-links 
+                    a(href="#").upcoming-renovation__top-link Pólizas
+                    span.upcoming-renovation__top-link /
+                    a(href="#").upcoming-renovation__top-link Próximas renovaciones
+                .upcoming-renovation__top-data 
+                    span.upcoming-renovation__top-title Próximas renovaciones
+                    .upcoming-renovation__top-policies
+                        span.upcoming-renovation__top-policies-icon.icon-file
+                        span.upcoming-renovation__top-policies-number 770 Pólizas
+
+        .upcoming-renovation__mid
+
+            .upcoming-renovation__filter-container.js-filter-container
+                button.upcoming-renovation__filter-button.js-filter-button
+                    .upcoming-renovation__filter-button-container.js-filter-button-container
+                        span.upcoming-renovation__icon-style.icon-filter
+                        span.upcoming-renovation__filter-button-text Filtros
+                        span.upcoming-renovation__number-filters.js-number-filters 0
+
+                .upcoming-renovation__dropdown-filter.js-dropdown-filter
+                    .upcoming-renovation__dropdown-filter-header
+                        span.upcoming-renovation__dropdown-text Filtros 
+                        button.upcoming-renovation__dropdown-filter-button-close.js-button-close
+                            span.upcoming-renovation__icon-close.icon-close
+
+                    .upcoming-renovation__dropdown-filter-options 
+                        form(action="#" method="GET").upcoming-renovation__dropdown-filter-form.js-dropdown-filter-form
+                            .upcoming-renovation__dropdown-filter-form-container
+                                .upcoming-renovation__dropdown-filter-item
+                                    label(for="policies-number") No. de pólizas
+                                    .upcoming-renovation__dropdown-filter-item-container
+                                        select(id="policies-number" name="policies-number").upcoming-renovation__dropdown-filter-item-select
+                                            option(value="allpolicies") Todas las pólizas
+                                            option(value="option2") Opción 2
+                                            option(value="option3") Opción 3
+                                        .upcoming-renovation__icon-style.icon-arrow-dropdown-2
+                                .upcoming-renovation__dropdown-filter-item
+                                    label(for="risk-name") Nombre del riesgo
+                                    input(type="text" id="risk-name" name="risk-name" placeholder="Introduce el nombre del riesgo").upcoming-renovation__dropdown-filter-item-input
+                                .upcoming-renovation__dropdown-filter-item
+                                    fieldset
+                                        legend.upcoming-renovation__dropdown-filter-item-legend-dates Fecha de validez
+                                            .upcoming-renovation__dropdown-filter-item-legend-dates-container
+                                                .upcoming-renovation__dropdown-filter-item-input
+                                                    input(type="date", id="start-date", name="start-date").upcoming-renovation__dropdown-filter-item-input-dates
+                                                    span.upcoming-renovation__icon-style.icon-calendar
+                                                span.upcoming-renovation__dropdown-filter-item-span-dates al
+                                                .upcoming-renovation__dropdown-filter-item-input
+                                                    input(type="date", id="end-date", name="end-date").upcoming-renovation__dropdown-filter-item-input-dates
+                                                    span.upcoming-renovation__icon-style.icon-calendar
+                                .upcoming-renovation__dropdown-filter-item
+                                    label(for="amount") Importe
+                                    input(type="number" id="amount" name="amount" placeholder="Introduce el importe").upcoming-renovation__dropdown-filter-item-input
+                                .upcoming-renovation__dropdown-filter-item
+                                    label(for="state") Estado
+                                    .upcoming-renovation__dropdown-filter-item-container
+                                        select(id="state" name="state").upcoming-renovation__dropdown-filter-item-select
+                                            option(value="allstate") Todas los estados
+                                            option(value="paid") Pagado
+                                            option(value="waiting") Pendiente 
+                                            option(value="expired") Vencido
+                                        .upcoming-renovation__icon-style.icon-arrow-dropdown-2
+                            .upcoming-renovation__dropdown-filter-footer
+                                button.upcoming-renovation__dropdown-filter-button-reset(type="reset") Borrar filtros
+                                button.upcoming-renovation__dropdown-filter-button-submit(type="submit") Aplicar filtros
+                                          
+        .upcoming-renovation__mid-container
+            .upcoming-renovation__mid-position
+                .upcoming-renovation__mid-result
+                    span.upcoming-renovation__mid-policies-number 770 Pólizas
+                    .upcoming-renovation__mid-applied-filters-container
+                        .upcoming-renovation__mid-applied-filters.js-show-filters
+                            span.upcoming-renovation__mid-vertical-bar |
+                            span.upcoming-renovation__mid-number-filter.js-number-filters 0
+                            span.upcoming-renovation__mid-applied-filters-text Filtros aplicados
+                button.upcoming-renovation__mid-button-reset.js-button-reset.js-show-filters Borrar filtros
+
+            .upcoming-renovation__mid-order-container
+                span.upcoming-renovation__mid-order-label Ordenar por:
+                button.upcoming-renovation__mid-order-button
+                    .upcoming-renovation__mid-order-button-container
+                        span.upcoming-renovation__mid-order-button-text Mayor importe
+                        span.upcoming-renovation__icon-style.icon-arrow-dropdown-2
+
+        .upcoming-renovation__mid-data
+        
+            +renovation-data-section('icon-waiting', 'Pendiente')
+            while iteration < 3
+                each icon, index in icon_state
+                    +renovation-data-section(icon, text_state[index])
+                - iteration++;
+            - iteration = 0;
+
+        .upcoming-renovation__bottom 
+
+            .upcoming-renovation__bottom-container
+                span.upcoming-renovation__bottom-filter-text Filas por páginas:
+                button.upcoming-renovation__bottom-filter-button
+                    .upcoming-renovation__bottom-filter-button-container
+                        span.upcoming-renovation__bottom-filter-number 10
+                        span.upcoming-renovation__icon-style.icon-arrow-dropdown-2
+
+
+            .upcoming-renovation__bottom-button-container
+                span.upcoming-renovation__bottom-pagination Página 1 de 77
+                button.upcoming-renovation__bottom-nav-button
+                    span.upcoming-renovation__bottom-nav-icon.icon-skip-left
+
+                button.upcoming-renovation__bottom-nav-button
+                    span.upcoming-renovation__bottom-nav-icon.icon-upcoming-left
+
+                button.upcoming-renovation__bottom-nav-button
+                    span.upcoming-renovation__bottom-nav-icon.icon-upcoming-right
+
+                button.upcoming-renovation__bottom-nav-button
+                    span.upcoming-renovation__bottom-nav-icon.icon-skip-right

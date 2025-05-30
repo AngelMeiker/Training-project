@@ -10746,12 +10746,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (count > 0) {
       // Añadimos la clase activa a cada uno de los elementos .js-show-filters
-      showFilters.forEach(el => el.classList.add('next-renovation__mid-show-filters--active'));
-      filterButtonContainer.classList.add('next-renovation__filter-button-container--active');
+      showFilters.forEach(el => el.classList.add('upcoming-renovation__mid-show-filters--active'));
+      filterButtonContainer.classList.add('upcoming-renovation__filter-button-container--active');
     } else {
       // Removemos la clase activa de cada uno de los elementos .js-show-filters
-      showFilters.forEach(el => el.classList.remove('next-renovation__mid-show-filters--active'));
-      filterButtonContainer.classList.remove('next-renovation__filter-button-container--active');
+      showFilters.forEach(el => el.classList.remove('upcoming-renovation__mid-show-filters--active'));
+      filterButtonContainer.classList.remove('upcoming-renovation__filter-button-container--active');
     }
   }
 
@@ -10802,7 +10802,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const dropdownFilter = document.querySelector('.js-dropdown-filter');
     const overlay = document.querySelector('.js-overlay');
     if (dropdownFilter && overlay) {
-      dropdownFilter.classList.remove('next-renovation__dropdown-filter--active');
+      dropdownFilter.classList.remove('upcoming-renovation__dropdown-filter--active');
       overlay.classList.remove('page-overlay--active');
       document.body.style.overflow = "";
     }
@@ -10817,10 +10817,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (filterButton && dropdownFilter) {
     filterButton.addEventListener("click", function () {
-      dropdownFilter.classList.toggle("next-renovation__dropdown-filter--active");
+      dropdownFilter.classList.toggle("upcoming-renovation__dropdown-filter--active");
       overlay.classList.toggle("page-overlay--active");
 
-      if (dropdownFilter.classList.contains("next-renovation__dropdown-filter--active")) {
+      if (dropdownFilter.classList.contains("upcoming-renovation__dropdown-filter--active")) {
         document.body.style.overflow = "hidden";
       } else {
         document.body.style.overflow = "";
@@ -10830,7 +10830,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (dropdownCloseButton && dropdownFilter) {
     dropdownCloseButton.addEventListener("click", function () {
-      dropdownFilter.classList.remove("next-renovation__dropdown-filter--active");
+      dropdownFilter.classList.remove("upcoming-renovation__dropdown-filter--active");
       overlay.classList.remove("page-overlay--active");
       document.body.style.overflow = "";
     });

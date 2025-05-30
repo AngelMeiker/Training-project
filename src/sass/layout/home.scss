@@ -72,13 +72,13 @@ body {
         }
     }
 
-    &__next-renovation-text,
+    &__upcoming-renovation-text,
     &__lead-text {
         @include font-style($ft-roboto, $ft-size-h3, $ft-weight-semibold, $gray100);
 
     }
 
-    &__next-renovation-text-container,
+    &__upcoming-renovation-text-container,
     &__lead-text-container {
         margin-top: 24px;
         margin-bottom: 24px;
