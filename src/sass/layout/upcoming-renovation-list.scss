@@ -157,6 +157,14 @@
     }
   }
 
+  &__mid-position{
+    display: flex;
+    gap: 8px;
+    @media (max-width: $media-md) {
+      flex-direction: column;
+    }
+  }
+
   &__mid-data {
     display: flex;
     flex-direction: column;
