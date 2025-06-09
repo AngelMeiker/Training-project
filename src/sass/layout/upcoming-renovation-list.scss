@@ -5,6 +5,7 @@
   padding: 0;
   margin: 0;
 
+ 
   &__icon-style {
     color: $primary;
   }
@@ -80,19 +81,30 @@
       padding: 0px;
     }
 
-    &-order-button {
-      @include font-style($ft-roboto, $ft-size-body, $ft-weight-bold, $text);
-      background-color: $white100;
-      border: 1px solid $text-nav;
-      border-radius: 4px;
-      padding: 10px 12px;
+    &-order{
+      &-button {
+        @include font-style($ft-roboto, $ft-size-body, $ft-weight-bold, $text);
+        background-color: $white100;
+        border: 1px solid $text-nav;
+        border-radius: 4px;
+        padding: 10px 12px;
+        cursor: pointer;
 
-      &-container {
-        display: flex;
-        gap: 8px;
-        align-items: center;
+        &-container {
+          display: flex;
+          gap: 8px;
+          align-items: center;
+        }
       }
 
+      &-dropdown{
+        display: none;
+        width: 175px;
+        transform: translateX(60%) translateY(10%);
+        &-item{
+          padding: 10px 12px;
+        }
+      }
     }
 
     &-container {
@@ -190,7 +202,7 @@
 
   &__filter-button {
     @include font-style($ft-roboto, $ft-size-body, $ft-weight-regular, $gray100);
-
+    cursor: pointer;
     border: 1px solid $primary;
     background-color: transparent;
     border-radius: 8px;
@@ -346,6 +358,7 @@
       color: $primary;
       background-color: transparent;
       border: none;
+      cursor: pointer;
     }
 
     &-footer {
@@ -362,6 +375,7 @@
       border-radius: 4px;
       padding: 8px 12px;
       background: none;
+      cursor: pointer;
     }
 
     &-button-submit {
@@ -369,6 +383,7 @@
       border-radius: 4px;
       padding: 8px 12px;
       background: $primary25;
+      cursor: pointer;
     }
 
     &--active {
@@ -414,18 +429,31 @@
       box-shadow: $bx-shadow;
       border-radius: 4px;
       padding: 8px 12px;
+      cursor: pointer;
     }
 
-    &-filter-button {
-      background-color: $white100;
-      border: 1px solid $text-nav;
-      border-radius: 4px;
-      padding: 10px 12px;
+    &-filter{
+      &-button {
+        background-color: $white100;
+        border: 1px solid $text-nav;
+        border-radius: 4px;
+        padding: 10px 12px;
+        cursor: pointer;
 
-      &-container {
-        display: flex;
-        align-items: center;
-        gap: 8px;
+        &-container {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+      }
+      &-dropdown{
+        display: none;
+        width: 65px;
+        transform: translateX(234%) translateY(55%);
+
+        &-item{
+          padding: 10px 12px;
+        }
       }
     }
 
@@ -434,6 +462,16 @@
       gap: 8px;
       align-items: center;
     }
+  }
+  &__dropdown--active{
+    display: flex;
+    flex-direction: column;
+    @include font-style($ft-roboto, $ft-size-body, $ft-weight-regular, $gray-text);
+    position: absolute;
+    background-color: $white100;
+    border-radius: 8px;
+    box-shadow: $bx-shadow;
+    z-index: 2;
   }
 }
 
